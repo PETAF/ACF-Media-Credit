@@ -2,7 +2,7 @@
 /*
   Plugin Name: Advanced Custom Fields Media Credit
   Description: This plugin adds Credit & Credit Link fields to the media uploading and editing tool and inserts this credit when the images appear on your blog.
-  Version: 2.3.6
+  Version: 2.3.7
   Author: Don Gaines
   Author URI: http://www.dongaines.com
 */
@@ -227,8 +227,9 @@ function filter_images_with_caption( $content ) {
 				//this will add a new shortcode attribute of class that will not be seen in the edit screen
 				//but will be interpreted by our filter_img_caption_shortcode function
 				$new_captioned_image = '[caption${1} class="${4}"]${2}<img${3}class="${4} has-caption-early"${5}[/caption]';
+
+				$content = preg_replace( $pattern, $new_captioned_image, $content );
 			}
-			$content = preg_replace( $pattern, $new_captioned_image, $content );
 		}
 	}
 	return $content;
