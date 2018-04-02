@@ -3,8 +3,8 @@ Contributors: donaldG2
 Donate link: https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=LNaVZ85rUkXbLOhRJPqAzVtr6Uw8Njw-W--sFOXfHTWWyKu52A-9spIhWaW&dispatch=5885d80a13c0db1f8e263663d3faee8d66f31424b43e9a70645c907a6cbd8fb4
 Tags: custom, field, custom field, advanced, repeater, media, image, images, credit, byline, author
 Requires at least: 4.0
-Tested up to: 4.7.3
-Stable tag: 2.3.6
+Tested up to: 4.9
+Stable tag: 2.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,7 +39,7 @@ Yes! There's a filter, `acf_media_credit_base_output` you can use for this purpo
 Most likely, I'm a pretty nice dude. If you have a question feel free to log it in the support section or contact me through my site at http://dongaines.com
 
 == Upgrade Notice ==
-=2.3.6=
+=2.3.7=
 Current
 
 == Screenshots ==
@@ -49,6 +49,9 @@ Current
 
 
 == Changelog ==
+= 2.3.7 =
+* Fixed a PHP scoping issue that resulted in blank page content when a [credit] was applied to an image without an HTML class attribute.
+
 = 2.3.6 =
 * Changing filter names so we are able to separate out how markup changes might be applied.
 
